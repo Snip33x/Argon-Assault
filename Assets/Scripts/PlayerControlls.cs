@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class PlayerControlls : MonoBehaviour
 {
+
+    [SerializeField] float controlSpeed = 2f;
+    [SerializeField] float xRange = 15f;
+    [SerializeField] float yRange = 10f;
+
     //new INsys [SerializeField] InputAction movement;
 
     // Start is called before the first frame update
@@ -30,12 +35,22 @@ public class PlayerControlls : MonoBehaviour
     {
         //new INsys float horizontalThrow = movement.ReadValue<Vector2>().x;
         //new INsys float verticalThrow = movement.ReadValue<Vector2>().y;
-
+        
 
         float xThrow = Input.GetAxis("Horizontal");
-        Debug.Log("horizontal " + xThrow);
-
         float yThrow = Input.GetAxis("Vertical");
-        Debug.Log("vertical " + yThrow);
+
+        float xOffset = xThrow * Time.deltaTime * controlSpeed;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+        
+        float yOffset = yThrow * Time.deltaTime * controlSpeed;
+        float rawYPos = transform.localPosition.y + yOffset;
+        float clampedYPos = Mathf.Clamp(rawYPos, -yRange + 3, yRange);  // statek zjeżdzał poniżej dolnej krawędzi ekranu , Rick przestawił kamerę do dołu - ja dodałem tu trójeczkę - oba sposoby działają
+
+        transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+
+
+
     }
 }
