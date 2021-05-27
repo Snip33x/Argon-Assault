@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // new INsys using UnityEngine.InputSystem;
@@ -9,6 +10,7 @@ public class PlayerControlls : MonoBehaviour
     [SerializeField] float controlSpeed = 2f;
     [SerializeField] float xRange = 15f;
     [SerializeField] float yRange = 10f;
+    [SerializeField] GameObject[] lasers;
 
     [SerializeField] float positionPitchFactor = -2f;
     [SerializeField] float controlPitchFactor = -10f;
@@ -47,6 +49,7 @@ public class PlayerControlls : MonoBehaviour
 
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
 
     }
 
@@ -82,4 +85,40 @@ public class PlayerControlls : MonoBehaviour
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
     }
+
+    
+
+    void ProcessFiring()
+    {
+        /*
+         * taki input stosowaliśmy w Rakietowniku 
+         * if(Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log("Shooting");
+        }*/
+
+        if(Input.GetButton("Fire1"))
+        {
+            SetLasersAvtive(true);
+        }
+        else
+        {
+            SetLasersAvtive(false);
+        }
+    }
+
+    private void SetLasersAvtive(bool isActive)
+    {
+        // for each of the lasers that we have, turn them on (activate them)
+        foreach (GameObject laser in lasers)
+        {
+            //laser.SetActive(true);  //property active is just saying if this gameobject is active or not, setactive changes status
+            //var emission = ParticleSystem.emission;
+            //laser.GetComponent<ParticleSystem>().emission.enabled = false;
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
+        }
+    }
+
+
 }
