@@ -76,6 +76,7 @@ Transform:
   m_Children:
   - {fileID: 8045227652802144813}
   - {fileID: 8585319284526285252}
+  - {fileID: 190743897365055770}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -416,15 +417,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 157.6
+      value: 3.27
       objectReference: {fileID: 0}
     - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 47.230007
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 147.46002
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -456,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099170246454459455, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
       propertyPath: m_Name
-      value: Laser
+      value: Laser Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
@@ -464,4 +465,66 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
   m_PrefabInstance: {fileID: 2080399336597041885}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7592953359831120387
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8045246296041856331}
+    m_Modifications:
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099170246454459455, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+      propertyPath: m_Name
+      value: Laser Left
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+--- !u!4 &190743897365055770 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+  m_PrefabInstance: {fileID: 7592953359831120387}
   m_PrefabAsset: {fileID: 0}
