@@ -58,6 +58,7 @@ public class PlayerControlls : MonoBehaviour
         ProcessTranslation();
         ProcessRotation();
         ProcessFiring();
+        
 
     }
 
@@ -128,5 +129,5 @@ public class PlayerControlls : MonoBehaviour
         }
     }
 
-
+    
 }
