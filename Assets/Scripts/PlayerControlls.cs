@@ -121,7 +121,7 @@ public class PlayerControlls : MonoBehaviour
         // for each of the lasers that we have, turn them on (activate them)
         foreach (GameObject laser in lasers)
         {
-            //laser.SetActive(true);  //property active is just saying if this gameobject is active or not, setactive changes status
+            //laser.SetActive(true);  //property active is just saying if this gameobject is active or not, setactive changes status // i think that it works this way because its particle system, i use prop enabled to manage scenes
             //var emission = ParticleSystem.emission;
             //laser.GetComponent<ParticleSystem>().emission.enabled = false;
             var emissionModule = laser.GetComponent<ParticleSystem>().emission;
