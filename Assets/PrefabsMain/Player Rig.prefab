@@ -28,6 +28,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cc48dbbbef2ca458288ec316270237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoadDelay: 1
+  crashParticles: {fileID: 0}
 --- !u!1 &7785616115078024755
 GameObject:
   m_ObjectHideFlags: 0
