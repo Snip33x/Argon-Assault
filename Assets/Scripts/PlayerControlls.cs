@@ -7,33 +7,33 @@ using UnityEngine;
 public class PlayerControlls : MonoBehaviour
 {
     [Header("General Setup Setting")]
-    [Tooltip("How fast ship moves up and down based upon player input")] 
+    [Tooltip("How fast ship moves up and down based upon player input")]
     [SerializeField] float controlSpeed = 2f;
-    [Tooltip("Horizontal Range where the ship will be flying")] 
+    [Tooltip("Horizontal Range where the ship will be flying")]
     [SerializeField] float xRange = 15f;
-    [Tooltip("Vertical Range where the ship will be flying")] 
+    [Tooltip("Vertical Range where the ship will be flying")]
     [SerializeField] float yRange = 10f;
-    
+
     [Header("Laser gun array")]
     [Tooltip("Add all player lasers here")]
     [SerializeField] GameObject[] lasers;
-    
+
     [Header("Screen posistion based tuning")]
     [SerializeField] float positionPitchFactor = -2f;
     [SerializeField] float positionYawFactor = 2f;
-    
+
     [Header("Player input based tuning")]
     [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float controlRollFactor = -20f;
 
-    float xThrow , yThrow;
+    float xThrow, yThrow;
 
     //new INsys [SerializeField] InputAction movement;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
 
@@ -58,7 +58,7 @@ public class PlayerControlls : MonoBehaviour
         ProcessTranslation();
         ProcessRotation();
         ProcessFiring();
-        
+
 
     }
 
@@ -69,11 +69,11 @@ public class PlayerControlls : MonoBehaviour
 
         float yawDueToPosition = transform.localPosition.x * positionYawFactor;
 
-        
 
-        float pitch =  pitchDueToPosition + pitchDueToControlThrow;
+
+        float pitch = pitchDueToPosition + pitchDueToControlThrow;
         float yaw = yawDueToPosition;
-        float roll = xThrow * controlRollFactor ;
+        float roll = xThrow * controlRollFactor;
 
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
@@ -95,7 +95,7 @@ public class PlayerControlls : MonoBehaviour
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
     }
 
-    
+
 
     void ProcessFiring()
     {
@@ -106,7 +106,7 @@ public class PlayerControlls : MonoBehaviour
             Debug.Log("Shooting");
         }*/
 
-        if(Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
             SetLasersAvtive(true);
         }
@@ -129,5 +129,6 @@ public class PlayerControlls : MonoBehaviour
         }
     }
 
-    
+
 }
+

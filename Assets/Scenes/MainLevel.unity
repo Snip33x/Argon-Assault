@@ -264,7 +264,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 241575334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ac6470a7dd650e45945ef1de47e776c, type: 3}
+  m_Script: {fileID: 11500000, guid: f4d12284f5abf9a4d89914ec72a728d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 8549074982112362374, guid: 7516f82b13d67844eab295f34c671fb0, type: 3}
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 289005649}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ac6470a7dd650e45945ef1de47e776c, type: 3}
+  m_Script: {fileID: 11500000, guid: f4d12284f5abf9a4d89914ec72a728d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 8549074982112362374, guid: 7516f82b13d67844eab295f34c671fb0, type: 3}
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 529845467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ac6470a7dd650e45945ef1de47e776c, type: 3}
+  m_Script: {fileID: 11500000, guid: f4d12284f5abf9a4d89914ec72a728d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 8549074982112362374, guid: 7516f82b13d67844eab295f34c671fb0, type: 3}
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 642015305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ac6470a7dd650e45945ef1de47e776c, type: 3}
+  m_Script: {fileID: 11500000, guid: f4d12284f5abf9a4d89914ec72a728d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 8549074982112362374, guid: 7516f82b13d67844eab295f34c671fb0, type: 3}
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1718503467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ac6470a7dd650e45945ef1de47e776c, type: 3}
+  m_Script: {fileID: 11500000, guid: f4d12284f5abf9a4d89914ec72a728d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 8549074982112362374, guid: 7516f82b13d67844eab295f34c671fb0, type: 3}
@@ -1191,5 +1191,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rig
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 26859519, guid: 4922e57dd7e3feb449c23470ec3b40a9, type: 3}
+    - {fileID: 9168336389898754445, guid: 4922e57dd7e3feb449c23470ec3b40a9, type: 3}
+    - {fileID: 262797434648896143, guid: 4922e57dd7e3feb449c23470ec3b40a9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4922e57dd7e3feb449c23470ec3b40a9, type: 3}

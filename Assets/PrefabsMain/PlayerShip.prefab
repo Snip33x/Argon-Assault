@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8045246296041856331}
   - component: {fileID: 8060446459959921421}
   - component: {fileID: 8069800712822841537}
-  - component: {fileID: 1166369055}
   - component: {fileID: 3921940870654630209}
   - component: {fileID: 7647022875048230547}
-  - component: {fileID: 8978450880350591517}
+  - component: {fileID: 5799055606794971697}
+  - component: {fileID: 7552968461465394920}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -88,26 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1166369055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8047063850583410547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14789b6d478c21d44aa5bb0566f52272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlSpeed: 40
-  xRange: 22
-  yRange: 15
-  lasers: []
-  positionPitchFactor: -2
-  positionYawFactor: 2
-  controlPitchFactor: -15
-  controlRollFactor: -20
 --- !u!65 &3921940870654630209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137,7 +117,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8978450880350591517
+--- !u!114 &5799055606794971697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,11 +126,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 8047063850583410547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05cc48dbbbef2ca458288ec316270237, type: 3}
+  m_Script: {fileID: 11500000, guid: 7668bd5dd60b9f44a8f1f44dfb9d4a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoadDelay: 1
   crashParticles: {fileID: 8595648596767701172}
+--- !u!114 &7552968461465394920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8047063850583410547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3277994f78d8444b47db9c35ca89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlSpeed: 50
+  xRange: 15
+  yRange: 10
+  lasers:
+  - {fileID: 7834319694567280354}
+  - {fileID: 1817658435777529404}
+  positionPitchFactor: -2
+  positionYawFactor: 2
+  controlPitchFactor: -10
+  controlRollFactor: -20
 --- !u!1001 &2080399336597041885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -208,6 +210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+--- !u!1 &7834319694567280354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8099170246454459455, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+  m_PrefabInstance: {fileID: 2080399336597041885}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8585319284526285252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
@@ -274,6 +281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+--- !u!1 &1817658435777529404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8099170246454459455, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
+  m_PrefabInstance: {fileID: 7592953359831120387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &190743897365055770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7780599795484406553, guid: 0a4b3b455d7b1d7429d573fb1d63d19a, type: 3}
