@@ -15,9 +15,14 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>(); // we have only one object of type score in hierarchy  bad to use in update()    
-        
+        AddRigidbody();
     }
 
+    private void AddRigidbody()
+    {
+        Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
+    }
 
     private void OnParticleCollision(GameObject other)
     {
