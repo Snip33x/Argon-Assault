@@ -9,6 +9,7 @@ public class ScoreBoard : MonoBehaviour
     int score;
     TMP_Text scoreText;
 
+
     void Start()
     {
         scoreText = GetComponent<TMP_Text>();
@@ -21,3 +22,4 @@ public class ScoreBoard : MonoBehaviour
         scoreText.text = score.ToString();
     }
 }
+

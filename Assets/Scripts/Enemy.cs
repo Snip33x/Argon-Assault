@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject hitVFX;
-    [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject deathFX;
     [SerializeField] int scorePerHit = 15;
     [SerializeField] int hitPoints = 2;
 
@@ -44,9 +44,9 @@ public class Enemy : MonoBehaviour
 
     private void KillEnemy()
     {
-        GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity); //quaternion.identity to jest poprostu aktualna rotacja bez zmian tak jak pozycja
-        vfx.transform.parent = parentGameObject.transform;
         scoreBoard.IncreaseScore(scorePerHit);
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity); //quaternion.identity to jest poprostu aktualna rotacja bez zmian tak jak pozycja
+        fx.transform.parent = parentGameObject.transform;
         Destroy(this.gameObject);
     }
 }
