@@ -38,9 +38,7 @@ public class Enemy : MonoBehaviour
     private void ProcessHit()
     {
         GameObject vfx = Instantiate(hitVFX, transform.position, Quaternion.identity); //quaternion.identity to jest poprostu aktualna rotacja bez zmian tak jak pozycja
-        vfx.transform.parent = parentGameObject.transform;
-        //Invoke("hitVFX", 1f);
-        scoreBoard.IncreaseScore(scorePerHit);
+        vfx.transform.parent = parentGameObject.transform;  
         hitPoints--;
     }
 
@@ -48,7 +46,7 @@ public class Enemy : MonoBehaviour
     {
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity); //quaternion.identity to jest poprostu aktualna rotacja bez zmian tak jak pozycja
         vfx.transform.parent = parentGameObject.transform;
-        //Invoke("DestroyVFX", 1f);
+        scoreBoard.IncreaseScore(scorePerHit);
         Destroy(this.gameObject);
     }
 }
